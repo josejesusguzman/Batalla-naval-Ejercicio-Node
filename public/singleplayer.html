@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalla naval</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script>
+        let gameMode = 'singlePlayer';
+    </script>
+    <script src="./cliente.js" charset="utf-8"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="battleship-grid grid-user"></div>
+        <div class="battleship-grid grid-cpu"></div>
+    </div>
+
+    <div class="container hidden-info">
+        <div class="setup-buttons" id="setup-buttons">
+            <button id="start" class="btn">Comenzar partida</button>
+            <button id="rotate" class="btn">Rotar barcos</button>
+        </div>
+        <h3 id="turno" class="info-text">Tu turno</h3>
+        <h3 id="info" class="info-text"></h3> 
+    </div>
+
+    <div class="container">
+        <div class="grid-display">
+            <div class="ship destroyer-container" draggable="true">
+                <div id="destroyer-0"></div>
+                <div id="destroyer-1"></div>
+            </div>
+            <div class="ship submarine-container" draggable="true">
+                <div id="submarine-0"></div>
+                <div id="submarine-1"></div>
+                <div id="submarine-2"></div>
+            </div>
+            <div class="ship crusier-container" draggable="true">
+                <div id="crusier-0"></div>
+                <div id="crusier-1"></div>
+                <div id="crusier-2"></div>
+            </div>
+            <div class="ship battleship-container" draggable="true">
+                <div id="battleship-0"></div>
+                <div id="battleship-1"></div>
+                <div id="battleship-2"></div>
+                <div id="battleship-3"></div>
+            </div>
+            <div class="ship carrier-container" draggable="true">
+                <div id="carrier-0"></div>
+                <div id="carrier-1"></div>
+                <div id="carrier-2"></div>
+                <div id="carrier-3"></div>
+                <div id="carrier-4"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
