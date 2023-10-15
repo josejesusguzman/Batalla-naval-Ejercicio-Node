@@ -1,0 +1,22 @@
+name: Auto update PR based on a comment
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+concurrency:
+  group: ${{ github.workflow }} - ${{ github.event.pull_request.head.ref }}
+
+jobs:
+  update_pr_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ env.HEAD_BRANCH }}
+      - name: Code Review Action
+        uses: codemakerai/codemaker-pull-request-action@2.0.0
+        with:
+          access-token: ${{ secrets.GITHUB_TOKEN }}
+          api-key: ${{ secrets.CODEMAKER_API_KEY }}
