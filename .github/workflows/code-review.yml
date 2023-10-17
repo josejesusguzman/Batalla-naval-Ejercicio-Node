@@ -16,7 +16,7 @@ jobs:
         with:
           ref: ${{ env.HEAD_BRANCH }}
       - name: Code Review Action
-        uses: codemakerai/codemaker-pull-request-action@2.0.0
+        uses: codemakerai/codemaker-pull-request-action@v2.0.0
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           api-key: ${{ secrets.CODEMAKER_API_KEY }}
