@@ -18,5 +18,5 @@ jobs:
       - name: Code Review Action
         uses: codemakerai/codemaker-pull-request-action@v2.0.0
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
+          access-token: ${{ secrets.GITHUBTEST_TOKEN }}
           api-key: ${{ secrets.CODEMAKER_API_KEY }}
